@@ -41,8 +41,26 @@ public class StatsService {
         return minMonth + 1;
     }
 
+    public int aboveAverageSales(int[] sales) {
+        int average = findAverage(sales);
+        int countMax = 0;
+        for (int sale : sales) {
+            if (sale < average) {
+                countMax = countMax + 1;
+            }
+        }
+        return countMax;
+    }
 
-    public int belowAverage(int[] sales) {
 
+    public int lessAverageSales(int[] sales) {
+        int average = findAverage(sales);
+        int countMin = 0;
+        for (int sale : sales) {
+            if (sale > average) {
+                countMin = countMin + 1;
+            }
+        }
+        return countMin;
     }
 }
