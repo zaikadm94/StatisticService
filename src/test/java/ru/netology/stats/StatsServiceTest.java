@@ -68,9 +68,9 @@ public class StatsServiceTest {
     public void lessAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 10};
-        int expectedQuantity = 4;
-        int actualQuantity = service.aboveAverageSales(sales);
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedQuantity = 5;
+        int actualQuantity = service.lessAverageSales(sales);
 
         Assertions.assertEquals(expectedQuantity, actualQuantity);
     }
